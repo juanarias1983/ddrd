@@ -1,0 +1,47 @@
+/* evitamos declarar variables en inglés para no pisar las del template */
+:root{
+--azul-oscuro: #405189;
+--azul-suave: #c4d0f3;
+}
+
+/* Contedor del logo sobre el menú */
+.navbar-brand-box{
+    background: var(--azul-suave);
+}
+
+/* Barra (columna) izquierda del menú */
+[data-layout=twocolumn] .twocolumn-iconview {
+    width: 88px;
+}
+.twocolumn-iconview > .simplebar-wrapper{
+    background: var(--azul-oscuro);
+}
+
+.navbar-menu{
+    border-right: 0px;
+}
+/* Barra (columna) derecha del menú (submenú) */
+#navbar-nav{
+    background: var(--azul-suave);
+}
+/* Links del submenú */
+.navbar-menu .navbar-nav .nav-sm .nav-link{
+    color: var(--azul-oscuro);
+}
+/* Guión de Links del submenú */
+.navbar-menu .navbar-nav .nav-sm .nav-link::before{
+    background: var(--azul-oscuro);
+}
+
+/* Elemento de la columna izquierda del menú */
+.twocolumn-iconview .nav-icon {
+    height: auto !important;
+    /* width: auto !important; */
+    flex-direction: column;
+}
+.menu-left__item{}
+.menu-left__item__text{
+    font-size: 10px;
+    line-height: 115%;
+    padding-bottom: 5px;
+}
