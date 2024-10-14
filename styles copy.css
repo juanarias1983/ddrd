@@ -1,0 +1,94 @@
+/*@property --x1 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 20%;
+}
+
+@property --y1 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 30%;
+}
+
+@property --x2 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --y2 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 30%;
+}
+
+.image-container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-image: url('https://asturies.com/sites/default/files/styles/large/public/IMG_0053.JPG');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: opacity 2s ease;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x1) var(--y1), rgba(0, 131, 211, 0.8), transparent 70%),
+                radial-gradient(circle at var(--x2) var(--y2), rgba(0, 131, 211, 0.5), transparent 70%),
+                radial-gradient(circle at calc(100% - var(--x2)) calc(100% - var(--y2)), rgba(0, 131, 211, 0.3), transparent 70%),
+                radial-gradient(circle at calc(100% - var(--x1)) calc(100% - var(--y1)), rgba(0, 131, 211, 0.7), transparent 70%);
+    background-blend-mode: multiply;
+    pointer-events: none;
+    transition: --x1 2s linear, --y1 2s linear, --x2 2s linear, --y2 2s linear, background 2s ease;
+}
+
+.image-container:hover::after {
+    animation: moveGradients 2s infinite linear;
+    background: radial-gradient(circle at var(--x1) var(--y1), rgba(0, 131, 211, 1), rgba(0, 131, 211, 1) 70%),
+                radial-gradient(circle at var(--x2) var(--y2), rgba(0, 131, 211, 1), rgba(0, 131, 211, 1) 70%),
+                radial-gradient(circle at calc(100% - var(--x2)) calc(100% - var(--y2)), rgba(0, 131, 211, 1), rgba(0, 131, 211, 1) 70%),
+                radial-gradient(circle at calc(100% - var(--x1)) calc(100% - var(--y1)), rgba(0, 131, 211, 1), rgba(0, 131, 211, 1) 70%);
+}
+
+@keyframes moveGradients {
+    0% {
+      --x1: 20%;
+      --y1: 30%;
+      --x2: 80%;
+      --y2: 30%;
+    }
+    25% {
+      --x1: 50%;
+      --y1: 40%;
+      --x2: 60%;
+      --y2: 50%;
+    }
+    50% {
+      --x1: 30%;
+      --y1: 60%;
+      --x2: 70%;
+      --y2: 20%;
+    }
+    75% {
+      --x1: 40%;
+      --y1: 80%;
+      --x2: 50%;
+      --y2: 60%;
+    }
+    100% {
+      --x1: 20%;
+      --y1: 30%;
+      --x2: 80%;
+      --y2: 30%;
+    }
+}
+*/
+
+
