@@ -1,47 +1,202 @@
 /* evitamos declarar variables en inglés para no pisar las del template */
-:root{
---azul-oscuro: #405189;
---azul-suave: #c4d0f3;
+:root {
+    --azul-oscuro: #405189;
+    --azul-suave: #c4d0f3;
 }
 
 /* Contedor del logo sobre el menú */
-.navbar-brand-box{
+.navbar-brand-box {
     background: var(--azul-suave);
+}
+
+/* Contenedor general del menú */
+[data-layout=twocolumn] .app-menu {
+    /* width: 238px; */
+}
+
+
+/* ******************************************* */
+/***Ensanchando la columna izquierda del menú***/
+/* ******************************************* */
+#scrollbar {
+    margin-left: 18px;
 }
 
 /* Barra (columna) izquierda del menú */
 [data-layout=twocolumn] .twocolumn-iconview {
     width: 88px;
 }
-.twocolumn-iconview > .simplebar-wrapper{
+
+[data-layout=twocolumn] .twocolumn-panel .main-content {
+    margin-left: 88px;
+}
+
+[data-layout=twocolumn] .twocolumn-panel #page-topbar,
+[data-layout=twocolumn] .twocolumn-panel .footer {
+    left: 88px;
+}
+
+/* ******************************************************* */
+/*** Fin del Ensanchando de la columna izquierda del menú***/
+/* ******************************************************* */
+
+
+
+/* *********************** */
+/*** Modificando colores ***/
+/* *********************** */
+.twocolumn-iconview>.simplebar-wrapper {
     background: var(--azul-oscuro);
 }
 
-.navbar-menu{
+.navbar-menu {
     border-right: 0px;
 }
+
 /* Barra (columna) derecha del menú (submenú) */
-#navbar-nav{
+#navbar-nav {
     background: var(--azul-suave);
 }
+
 /* Links del submenú */
-.navbar-menu .navbar-nav .nav-sm .nav-link{
+.navbar-menu .navbar-nav .nav-sm .nav-link {
     color: var(--azul-oscuro);
 }
+
 /* Guión de Links del submenú */
-.navbar-menu .navbar-nav .nav-sm .nav-link::before{
+.navbar-menu .navbar-nav .nav-sm .nav-link::before {
     background: var(--azul-oscuro);
 }
 
-/* Elemento de la columna izquierda del menú */
+/* ****************************** */
+/*** fin de Modificando colores ***/
+/* ****************************** */
+
+
+/* ****************************************** */
+/* Elementos de la columna izquierda del menú */
+/* ****************************************** */
 .twocolumn-iconview .nav-icon {
     height: auto !important;
     /* width: auto !important; */
     flex-direction: column;
 }
-.menu-left__item{}
-.menu-left__item__text{
+
+.twocolumn-iconview .nav-icon>i {
+    width: 42px;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    background: var(--azul-oscuro);
+    position: relative;
+}
+
+/* .twocolumn-iconview .nav-icon:hover i {
+    background: #6374adab;
+} */
+
+.twocolumn-iconview .nav-icon::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    /* background: #f2f2f2; */
+    border: 9px solid transparent;
+    border-radius: 0;
+    z-index: -1;
+    box-sizing: border-box;
+    top: 3.5px;
+    /* left: -1px;
+    top: -1px; */
+}
+
+.twocolumn-iconview .nav-icon:hover::before {
+    border-color: #e74c3c;
+    animation: drawBorder .33s linear forwards;
+}
+
+/* Keyframes para la animación de los botones de la izquierda */
+@keyframes drawBorder {
+    0% {
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: #e74c3c;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    25% {
+        border-bottom-color: #e74c3c;
+    }
+
+    50% {
+        border-left-color: #e74c3c;
+    }
+
+    75% {
+        border-top-color: #e74c3c;
+    }
+
+    100% {
+        border-color: #e74c3c;
+    }
+}
+
+[data-layout=twocolumn] .twocolumn-iconview .nav-icon.active {
+    background-color: transparent;
+}
+[data-layout=twocolumn] .twocolumn-iconview .nav-icon.active::before  {
+    border-color: #fff;
+    animation: drawborderWhite 1s linear forwards;
+}
+
+/* Keyframes para la animación de los botones de la izquierda */
+@keyframes drawBorderWhite {
+    0% {
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: #fff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    25% {
+        border-top-color: #fff;
+    }
+    
+    50% {
+        border-left-color: #fff;
+    }
+    
+    75% {
+        border-bottom-color: #fff;
+    }
+
+    100% {
+        border-color: #fff;
+    }
+}
+
+
+.nav-icon.active .menu-left__item {
+
+}
+
+.menu-left__item__text {
     font-size: 10px;
     line-height: 115%;
     padding-bottom: 5px;
+    margin-top: 2px;
 }
+
+/* Hot tag */
+.badge-pill.menu-left__item__text {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    padding: 3px;
+    line-height: 109%;
+    font-size: 9px;
+}
+
+/* ****************************************** */
+/* ****************************************** */
