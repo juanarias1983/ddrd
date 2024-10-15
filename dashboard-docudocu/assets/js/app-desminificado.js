@@ -68,7 +68,7 @@
     function i() {
         var n, e = document.documentElement.getAttribute("data-layout"),
         t = sessionStorage.getItem("defaultAttribute"),
-        t = JSON.parse(t); ! t || "twocolumn" != e && "twocolumn" != t["data-layout"] || (document.querySelector(".navbar-menu") && (document.querySelector(".navbar-menu").innerHTML = d), (n = document.createElement("ul")).innerHTML = '<a href="#" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22"></a>', Array.from(document.getElementById("navbar-nav").querySelectorAll(".menu-link")).forEach(function(e) {
+        t = JSON.parse(t); ! t || "twocolumn" != e && "twocolumn" != t["data-layout"] || (document.querySelector(".navbar-menu") && (document.querySelector(".navbar-menu").innerHTML = d), (n = document.createElement("ul")).innerHTML = '<a href="#" class="logo"><img src="assets/images/hojita.png" alt="" height="32"></a>', Array.from(document.getElementById("navbar-nav").querySelectorAll(".menu-link")).forEach(function(e) {
             n.className = "twocolumn-iconview";
             var t = document.createElement("li"),
             a = e;
