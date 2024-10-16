@@ -186,7 +186,7 @@
                             </div>
                         </div>
 
-                        <div class="dropdown ms-1 topbar-head-dropdown header-item">
+                        <!-- <div class="dropdown ms-1 topbar-head-dropdown header-item">
                             <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img id="header-lang-img" src="assets/images/flags/us.svg" alt="Header Language"
@@ -194,7 +194,6 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
 
-                                <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language py-2"
                                     data-lang="en" title="English">
                                     <img src="assets/images/flags/us.svg" alt="user-image" class="me-2 rounded"
@@ -202,7 +201,6 @@
                                     <span class="align-middle">English</span>
                                 </a>
 
-                                <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp"
                                     title="Spanish">
                                     <img src="assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded"
@@ -210,54 +208,14 @@
                                     <span class="align-middle">Española</span>
                                 </a>
 
-                                <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr"
                                     title="German">
                                     <img src="assets/images/flags/germany.svg" alt="user-image" class="me-2 rounded"
                                         height="18"> <span class="align-middle">Deutsche</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it"
-                                    title="Italian">
-                                    <img src="assets/images/flags/italy.svg" alt="user-image" class="me-2 rounded"
-                                        height="18">
-                                    <span class="align-middle">Italiana</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru"
-                                    title="Russian">
-                                    <img src="assets/images/flags/russia.svg" alt="user-image" class="me-2 rounded"
-                                        height="18">
-                                    <span class="align-middle">русский</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ch"
-                                    title="Chinese">
-                                    <img src="assets/images/flags/china.svg" alt="user-image" class="me-2 rounded"
-                                        height="18">
-                                    <span class="align-middle">中国人</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr"
-                                    title="French">
-                                    <img src="assets/images/flags/french.svg" alt="user-image" class="me-2 rounded"
-                                        height="18">
-                                    <span class="align-middle">français</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ar"
-                                    title="Arabic">
-                                    <img src="assets/images/flags/ae.svg" alt="user-image" class="me-2 rounded"
-                                        height="18">
-                                    <span class="align-middle">Arabic</span>
-                                </a>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="dropdown topbar-head-dropdown ms-1 header-item">
                             <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
@@ -323,183 +281,13 @@
                             </div>
                         </div>
 
-                        <div class="dropdown topbar-head-dropdown ms-1 header-item">
-                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
-                                id="page-header-cart-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class='bx bx-shopping-bag fs-22'></i>
-                                <span
-                                    class="position-absolute topbar-badge cartitem-badge fs-10 translate-middle badge rounded-pill bg-info">5</span>
+
+
+                        <!-- Calendario -->
+                        <div class="ms-1 header-item d-none d-sm-flex">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle">
+                                <i class='bx bx-calendar fs-22'></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end p-0 dropdown-menu-cart"
-                                aria-labelledby="page-header-cart-dropdown">
-                                <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h6 class="m-0 fs-16 fw-semibold"> My Cart</h6>
-                                        </div>
-                                        <div class="col-auto">
-                                            <span class="badge bg-warning-subtle text-warning fs-13"><span
-                                                    class="cartitem-badge">7</span>
-                                                items</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-simplebar style="max-height: 300px;">
-                                    <div class="p-2">
-                                        <div class="text-center empty-cart" id="empty-cart">
-                                            <div class="avatar-md mx-auto my-3">
-                                                <div class="avatar-title bg-info-subtle text-info fs-36 rounded-circle">
-                                                    <i class='bx bx-cart'></i>
-                                                </div>
-                                            </div>
-                                            <h5 class="mb-3">Your Cart is Empty!</h5>
-                                            <a href="apps-ecommerce-products.html"
-                                                class="btn btn-success w-md mb-3">Shop Now</a>
-                                        </div>
-                                        <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/products/img-1.png"
-                                                    class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mt-0 mb-1 fs-14">
-                                                        <a href="apps-ecommerce-product-details.html"
-                                                            class="text-reset">Branded
-                                                            T-Shirts</a>
-                                                    </h6>
-                                                    <p class="mb-0 fs-12 text-muted">
-                                                        Quantity: <span>10 x $32</span>
-                                                    </p>
-                                                </div>
-                                                <div class="px-2">
-                                                    <h5 class="m-0 fw-normal">$<span class="cart-item-price">320</span>
-                                                    </h5>
-                                                </div>
-                                                <div class="ps-2">
-                                                    <button type="button"
-                                                        class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                            class="ri-close-fill fs-16"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/products/img-2.png"
-                                                    class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mt-0 mb-1 fs-14">
-                                                        <a href="apps-ecommerce-product-details.html"
-                                                            class="text-reset">Bentwood Chair</a>
-                                                    </h6>
-                                                    <p class="mb-0 fs-12 text-muted">
-                                                        Quantity: <span>5 x $18</span>
-                                                    </p>
-                                                </div>
-                                                <div class="px-2">
-                                                    <h5 class="m-0 fw-normal">$<span class="cart-item-price">89</span>
-                                                    </h5>
-                                                </div>
-                                                <div class="ps-2">
-                                                    <button type="button"
-                                                        class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                            class="ri-close-fill fs-16"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/products/img-3.png"
-                                                    class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mt-0 mb-1 fs-14">
-                                                        <a href="apps-ecommerce-product-details.html"
-                                                            class="text-reset">
-                                                            Borosil Paper Cup</a>
-                                                    </h6>
-                                                    <p class="mb-0 fs-12 text-muted">
-                                                        Quantity: <span>3 x $250</span>
-                                                    </p>
-                                                </div>
-                                                <div class="px-2">
-                                                    <h5 class="m-0 fw-normal">$<span class="cart-item-price">750</span>
-                                                    </h5>
-                                                </div>
-                                                <div class="ps-2">
-                                                    <button type="button"
-                                                        class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                            class="ri-close-fill fs-16"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/products/img-6.png"
-                                                    class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mt-0 mb-1 fs-14">
-                                                        <a href="apps-ecommerce-product-details.html"
-                                                            class="text-reset">Gray
-                                                            Styled T-Shirt</a>
-                                                    </h6>
-                                                    <p class="mb-0 fs-12 text-muted">
-                                                        Quantity: <span>1 x $1250</span>
-                                                    </p>
-                                                </div>
-                                                <div class="px-2">
-                                                    <h5 class="m-0 fw-normal">$ <span
-                                                            class="cart-item-price">1250</span></h5>
-                                                </div>
-                                                <div class="ps-2">
-                                                    <button type="button"
-                                                        class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                            class="ri-close-fill fs-16"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/products/img-5.png"
-                                                    class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mt-0 mb-1 fs-14">
-                                                        <a href="apps-ecommerce-product-details.html"
-                                                            class="text-reset">Stillbird Helmet</a>
-                                                    </h6>
-                                                    <p class="mb-0 fs-12 text-muted">
-                                                        Quantity: <span>2 x $495</span>
-                                                    </p>
-                                                </div>
-                                                <div class="px-2">
-                                                    <h5 class="m-0 fw-normal">$<span class="cart-item-price">990</span>
-                                                    </h5>
-                                                </div>
-                                                <div class="ps-2">
-                                                    <button type="button"
-                                                        class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                            class="ri-close-fill fs-16"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-3 border-bottom-0 border-start-0 border-end-0 border-dashed border"
-                                    id="checkout-elem">
-                                    <div class="d-flex justify-content-between align-items-center pb-3">
-                                        <h5 class="m-0 text-muted">Total:</h5>
-                                        <div class="px-2">
-                                            <h5 class="m-0" id="cart-item-total">$1258.58</h5>
-                                        </div>
-                                    </div>
-
-                                    <a href="apps-ecommerce-checkout.html" class="btn btn-success text-center w-100">
-                                        Checkout
-                                    </a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="ms-1 header-item d-none d-sm-flex">
@@ -2244,7 +2032,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Two Column</h4>
+                                <h4 class="mb-sm-0">Inicio</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -2258,84 +2046,67 @@
                     </div>
                     <!-- end page title -->
 
-                    
+
                     <!-- Enlaces a servicios (Megabotones-cards) -->
                     <!-- Fila de Tarjetas de servicios -->
                     <div class="row">
 
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-warning-subtle text-warning rounded-2 fs-2">
-                                                <i data-feather="award" class="text-warning"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <p class="text-uppercase fw-medium text-muted mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo I</h4>
-                                                <span class="badge bg-success-subtle text-success fs-12"><i
-                                                        class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>3.58
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted mb-0">Descripción corta</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
+
+                            <!-- Enlace distributivo -->
+                            <a href="#" class="cuerpo__item cuerpo__item--facturacion">
+
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        FACTURACIÓN
+                                    </h3>
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
+
                         </div><!-- Fin de item de servicio -->
 
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo II</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Work this month</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
+
+                            <a href="#" class="cuerpo__item cuerpo__item--cae">
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        CAE
+                                    </h3>
+                                    <!-- <img class="cuerpo__item__main__image" src="assets/icons/accounting-03.png" alt="Icono de CAE"> -->
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
+
                         </div><!-- fin de item de servicio -->
-                        
+
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo III</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Work this month</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
+
+                            <!-- Enlace distributivo -->
+                            <a href="#" class="cuerpo__item cuerpo__item--rgpd">
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        RGPD
+                                    </h3>
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
+
                         </div><!-- fin de item de servicio -->
 
                     </div><!-- end row -->
@@ -2345,32 +2116,28 @@
 
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo IV</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Descripción corta</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
+
+                            <!-- Enlace distributivo -->
+                            <a href="#" class="cuerpo__item cuerpo__item--contabilidad">
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        CONTABILIDAD
+                                    </h3>
+                                    <!-- <img class="cuerpo__item__main__image" src="assets/icons/accounting-12.png"
+                                        alt="Icono de contabilidad"> -->
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
+
                         </div><!-- fin de item de servicio -->
 
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
+                            <!-- <div class="card card-animate">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0">
@@ -2379,7 +2146,8 @@
                                             </span>
                                         </div>
                                         <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
+                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo
+                                            </p>
                                             <div class="d-flex align-items-center mb-3">
                                                 <h4 class="fs-4 flex-grow-1 mb-0">Módulo V</h4>
                                                 <span class="badge bg-danger-subtle text-danger fs-12"><i
@@ -2389,13 +2157,29 @@
                                             <p class="text-muted text-truncate mb-0">Descripción corta</p>
                                         </div>
                                     </div>
-                                </div><!-- end card body -->
-                            </div>
+                                </div> -->
+                            <!-- end card body -->
+                            <!-- </div> -->
+                            <!-- Enlace distributivo -->
+                            <a href="#" class="cuerpo__item cuerpo__item--empleados">
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        EMPLEADOS
+                                    </h3>
+                                    <!-- <img class="cuerpo__item__main__image" src="assets/icons/accounting-04.png"
+                                        alt="Icono de empleados"> -->
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
                         </div><!-- fin de item de servicio -->
-                        
+
                         <!-- item servicio -->
                         <div class="col-xl-4">
-                            <div class="card card-animate">
+                            <!-- <div class="card card-animate">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0">
@@ -2404,7 +2188,8 @@
                                             </span>
                                         </div>
                                         <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
+                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo
+                                            </p>
                                             <div class="d-flex align-items-center mb-3">
                                                 <h4 class="fs-4 flex-grow-1 mb-0">Módulo VI</h4>
                                                 <span class="badge bg-danger-subtle text-danger fs-12"><i
@@ -2414,91 +2199,25 @@
                                             <p class="text-muted text-truncate mb-0">Descripción corta</p>
                                         </div>
                                     </div>
-                                </div><!-- end card body -->
-                            </div>
+                                </div> -->
+                            <!-- end card body -->
+                            <!-- </div> -->
+                            <a href="#" class="cuerpo__item cuerpo__item--formacion">
+                                <div class="cuerpo__item__main">
+                                    <h3 class="cuerpo__item__main__title">
+                                        FORMACIÓN
+                                    </h3>
+                                    <!-- <img class="cuerpo__item__main__image" src="assets/icons/accounting-08.png" alt="Icono de formación"> -->
+                                </div>
+                                <div class="cuerpo__item__foot">
+                                    <p class="cuerpo__item__foot__text">
+                                        Esto es una pequeña descripción de ejemplo
+                                    </p>
+                                </div>
+                            </a>
                         </div><!-- fin de item de servicio -->
 
                     </div><!-- fin de fila de servicios -->
-
-                    <!-- Fila de Tarjetas de servicios -->
-                    <div class="row">
-
-                        <!-- item servicio -->
-                        <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo VII</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Descripción corta</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div><!-- fin de item de servicio -->
-
-                        <!-- item servicio -->
-                        <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo VIII</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Descripción corta</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div><!-- fin de item de servicio -->
-
-                        <!-- item servicio -->
-                        <div class="col-xl-4">
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-info-subtle text-info rounded-2 fs-2">
-                                                <i data-feather="clock" class="text-info"></i>
-                                            </span>
-                                        </div>
-                                        <div class="flex-grow-1 overflow-hidden ms-3">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Pretítulo</p>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <h4 class="fs-4 flex-grow-1 mb-0">Módulo IX</h4>
-                                                <span class="badge bg-danger-subtle text-danger fs-12"><i
-                                                        class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35
-                                                    %</span>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Descripción corta</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div>
-                        </div><!-- fin de item de servicio -->
-
-                    </div><!-- fin de Fila de servicios -->
 
 
 
