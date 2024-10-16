@@ -4,6 +4,10 @@
     --azul-suave: #c4d0f3;
 }
 
+html{
+    scrollbar-width: thin;
+}
+
 /* Contedor del logo sobre el menú */
 .navbar-brand-box {
     background: var(--azul-suave);
@@ -111,7 +115,7 @@
 
 .twocolumn-iconview .nav-icon:hover::before {
     border-color: #e74c3c;
-    animation: drawBorder .33s linear forwards;
+    animation: drawBorder .7s linear forwards;
 }
 
 /* Keyframes para la animación de los botones de la izquierda */
@@ -144,9 +148,10 @@
 [data-layout=twocolumn] .twocolumn-iconview .nav-icon.active {
     background-color: transparent;
 }
-[data-layout=twocolumn] .twocolumn-iconview .nav-icon.active::before  {
-    border-color: #fff;
-    animation: drawborderWhite 1s linear forwards;
+
+[data-layout=twocolumn] .twocolumn-iconview .nav-icon.active::before {
+    animation: drawBorderWhite .7s linear forwards;
+    /* border-color: #fff; */
 }
 
 /* Keyframes para la animación de los botones de la izquierda */
@@ -162,11 +167,11 @@
     25% {
         border-top-color: #fff;
     }
-    
+
     50% {
         border-left-color: #fff;
     }
-    
+
     75% {
         border-bottom-color: #fff;
     }
@@ -177,9 +182,7 @@
 }
 
 
-.nav-icon.active .menu-left__item {
-
-}
+.nav-icon.active .menu-left__item {}
 
 .menu-left__item__text {
     font-size: 10px;
@@ -200,3 +203,256 @@
 
 /* ****************************************** */
 /* ****************************************** */
+
+
+/******************************************************/
+/**************** Cards distributivos *****************/
+/******************************************************/
+.cuerpo {
+    font-family: "Kanit", sans-serif;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1180px;
+}
+
+.cuerpo__item {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 32px;
+    color: #fff;
+    transition: all 0.18s ease;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 24px;
+
+    display: block;
+    width: 100%;
+}
+
+.cuerpo__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.72;
+    border-radius: 4px;
+    z-index: 1;
+    transform: translateX(0);
+    transition: transform 0.18s ease;
+}
+
+.cuerpo__item__main,
+.cuerpo__item__foot {
+    position: relative;
+    z-index: 2;
+}
+
+.cuerpo__item__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.cuerpo__item__main__title {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    transition: background 0.18s ease, color 0.18s ease;
+
+    font-weight: 800;
+}
+
+.cuerpo__item__main__image {
+    width: 40%;
+    margin: 0 auto;
+    height: auto;
+    filter: invert(1);
+}
+
+.cuerpo__item__foot__text {
+    margin: 0;
+    font-size: 22px;
+}
+
+.cuerpo__item:hover {
+    transform: scale(1.05);
+    transform-origin: center center;
+}
+
+.cuerpo__item:hover::before {
+    transform: translateX(100%);
+}
+
+.cuerpo__item:hover .cuerpo__item__main__title,
+.cuerpo__item:hover .cuerpo__item__foot__text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.cuerpo__item--facturacion {
+    background-image: url(../images/billing.webp);
+    border-color: rgb(22, 98, 172);
+}
+
+.cuerpo__item--facturacion::before {
+    background: linear-gradient(45deg, rgb(22, 98, 172) 28%, rgba(153, 185, 217, 0.671) 100%);
+    opacity: 0.88;
+}
+
+.cuerpo__item--facturacion:hover {
+    background: transparent;
+}
+
+.cuerpo__item--facturacion:hover .cuerpo__item__main__title,
+.cuerpo__item--facturacion:hover .cuerpo__item__foot__text {
+    background: linear-gradient(45deg, rgb(22, 98, 172) 28%, rgb(153, 185, 217) 100%);
+    -webkit-background-clip: text;
+}
+
+.cuerpo__item--cae {
+    background-image: url(../images/riesgos-laborales.webp);
+    border: 2px solid rgb(71, 119, 85);
+}
+
+.cuerpo__item--cae::before {
+    background: linear-gradient(45deg, rgb(71, 119, 85) 28%, rgba(128, 208, 151, 0.726) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--cae:hover {
+    background: transparent;
+}
+
+.cuerpo__item--cae:hover .cuerpo__item__main__title,
+.cuerpo__item--cae:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(71, 119, 85) 28%, rgb(128, 208, 151) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cuerpo__item--rgpd {
+    background-image: url(../images/proteccion-datos.webp);
+    border-color: rgb(94, 75, 149);
+}
+
+.cuerpo__item--rgpd::before {
+    background: linear-gradient(45deg, rgb(94, 75, 149) 28%, rgba(160, 145, 201, 0.719) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--rgpd:hover {
+    background: transparent;
+}
+
+.cuerpo__item--rgpd:hover .cuerpo__item__main__title,
+.cuerpo__item--rgpd:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(94, 75, 149) 28%, rgb(160, 145, 201) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cuerpo__item--contabilidad {
+    background-image: url(../images/billing2.webp);
+    border-color: rgb(186, 78, 59);
+}
+
+.cuerpo__item--contabilidad::before {
+    background: linear-gradient(45deg, rgb(186, 78, 59) 28%, rgba(224, 158, 147, 0.747) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--contabilidad:hover {
+    background: transparent;
+}
+
+.cuerpo__item--contabilidad:hover .cuerpo__item__main__title,
+.cuerpo__item--contabilidad:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(186, 78, 59) 28%, rgb(224, 159, 147) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cuerpo__item--empleados {
+    background-image: url(../images/empleados.webp);
+    border-color: rgb(9, 105, 91);
+}
+
+.cuerpo__item--empleados::before {
+    background: linear-gradient(45deg, rgb(9, 105, 91) 28%, rgba(107, 207, 190, 0.712) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--empleados:hover {
+    background: transparent;
+}
+
+.cuerpo__item--empleados:hover .cuerpo__item__main__title,
+.cuerpo__item--empleados:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(9, 105, 91) 28%, rgb(107, 207, 191) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cuerpo__item--preventlegal {
+    background-image: url(../images/legal.webp);
+    border-color: rgb(19, 91, 135);
+}
+
+.cuerpo__item--preventlegal::before {
+    background: linear-gradient(45deg, rgb(19, 91, 135) 28%, rgba(88, 169, 219, 0.747) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--preventlegal:hover {
+    background: transparent;
+}
+
+.cuerpo__item--preventlegal:hover .cuerpo__item__main__title,
+.cuerpo__item--preventlegal:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(19, 91, 135) 28%, rgb(88, 169, 219) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cuerpo__item--formacion {
+    background-image: url(../images/formacion.webp);
+    border-color: rgb(147, 139, 21);
+}
+
+.cuerpo__item--formacion::before {
+    background: linear-gradient(45deg, rgb(147, 139, 21) 28%, rgba(212, 204, 86, 0.712) 100%);
+    opacity: 0.8;
+}
+
+.cuerpo__item--formacion:hover {
+    background: transparent;
+}
+
+.cuerpo__item--formacion:hover .cuerpo__item__main__title,
+.cuerpo__item--formacion:hover .cuerpo__item__foot__text {
+    background: linear-gradient(0deg, rgb(147, 139, 21) 28%, rgb(212, 203, 86) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*# sourceMappingURL=main-body.css.map */
