@@ -1,0 +1,119 @@
+/* Definir la propiedad animable para los radios de los círculos */
+@property --circle1-radius {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 225px; /* 45% del tamaño inicial */
+}
+  
+@property --circle2-radius {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 375px; /* 75% del tamaño inicial */
+}
+
+/* Estilo del contenedor */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+  
+.container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+  
+.background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+}
+  
+.circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Para evitar que los círculos bloqueen el hover */
+}
+  
+circle {
+    fill: rgba(0, 131, 211, 0.8);
+    mix-blend-mode: multiply; /* Aplicar el modo de mezcla */
+    opacity: 1; /* Aseguramos que los círculos son visibles desde el principio */
+    transition: r 0.8s ease-in-out;
+}
+  
+/* Propiedades iniciales de los círculos */
+.circle-1 {
+    r: var(--circle1-radius);
+    fill: rgba(255, 85, 0, 0.7); /* Color principal */
+    cx: 500; /* Mantiene el centro en la esquina superior derecha */
+    cy: 0;
+    transition: r 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Círculo 1: con rebote */
+}
+  
+.circle-2 {
+    r: var(--circle2-radius);
+    fill: rgba(255, 85, 0, 0.5); /* Color ajustado más claro */
+    cx: 500; /* Mantiene el centro en la esquina superior derecha */
+    cy: 0;
+    transition: r 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Círculo 2: velocidad rápida */
+}
+
+/* Estilos de la superposición de texto */
+.text-container {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.text-container h1 {
+    font-size: 48px;
+    margin: 0;
+}
+  
+.text-container p {
+    font-size: 16px;
+}
+
+/* Icono en la esquina inferior derecha */
+.icon-container {
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    opacity: 0.5; /* Comienza con opacidad del 50% */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Añadir cubic-bezier para rebote */
+}
+
+/* Hover para iniciar la animación de los círculos */
+.container:hover .circle-1 {
+    --circle1-radius: 600px; /* Círculo 1 cubrirá toda la imagen */
+}
+  
+.container:hover .circle-2 {
+    --circle2-radius: 600px; /* Círculo 2 también cubrirá toda la imagen */
+    fill-opacity: 1; /* El círculo 2 será completamente opaco */
+}
+
+/* Hover para mover el icono al centro y al 35% de la parte inferior con rebote */
+.container:hover .icon-container {
+    opacity: 1; /* Cambiar opacidad a 100% */
+    bottom: 35%; /* Mover hacia el 35% del eje Y */
+    right: 50%;
+    transform: translate(50%, 35%) scale(1.2); /* Mover y hacer un pequeño rebote */
+}

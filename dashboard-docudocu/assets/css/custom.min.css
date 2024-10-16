@@ -1,2 +1,174 @@
+@font-face {
+    font-family: 'NeueHaasDisplayXThin';
+    src: url('../fonts/NeueHaasDisplayXThin.ttf') format('truetype');
+    font-style: normal;
+}
 
-/*# sourceMappingURL=custom.min.css.map */
+@font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: url('../fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('../fonts/NeueHaasDisplayMediu.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* Estilo para los círculos */
+.circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Para evitar que los círculos bloqueen el hover */
+}
+
+circle {
+    fill: rgba(0, 131, 211, 0.8);
+    mix-blend-mode: multiply; /* Aplicar el modo de mezcla */
+    opacity: 1; /* Aseguramos que los círculos son visibles desde el principio */
+    transition: r 0.8s ease-in-out;
+}
+
+/* Propiedades iniciales de los círculos */
+.circle-1 {
+    r: var(--circle1-radius);
+    fill: rgba(255, 85, 0, 0.3); /* Color principal */
+    cx: 500; /* Mantiene el centro en la esquina superior derecha */
+    cy: 0;
+    transition: r 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Círculo 1: con rebote */
+}
+
+.circle-2 {
+    r: var(--circle2-radius);
+    fill: rgba(255, 85, 0, 0.3); /* Color ajustado más claro */
+    cx: 500; /* Mantiene el centro en la esquina superior derecha */
+    cy: 0;
+    transition: r 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Círculo 2: velocidad rápida */
+}
+
+/* Hover para iniciar la animación de los círculos */
+.card-body:hover .circle-1 {
+    --circle1-radius: 600px; /* Círculo 1 cubrirá toda la imagen */
+}
+
+.card-body:hover .circle-2 {
+    --circle2-radius: 600px; /* Círculo 2 también cubrirá toda la imagen */
+    fill-opacity: 1; /* El círculo 2 será completamente opaco */
+}
+
+/* Estilos para el icono */
+.card-link {
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    opacity: 0; /* Comienza con opacidad del 50% */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Hover para mover el icono al centro y al 35% de la parte inferior con rebote */
+.card-body:hover .card-link {
+    opacity: .8; 
+    bottom: 35%; 
+    right: 50%;
+    transform: translate(50%, 35%) scale(1);
+    animation: move 0.3  0s; 
+}
+.card-body:hover .card-titles h4,
+.card-body:hover .card-titles p {
+    opacity: 0.3;
+}
+
+@keyframes move {
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+      transform: translate(50%, 35%) scale(1); 
+    }
+  }
+  
+  .card-link::before {
+    /* content: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 75 64.95%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1{fill:%23fff;}%3C/style%3E%3C/defs%3E%3Cg id=%22Capa_1-2%22 data-name=%22Capa 1%22%3E%3Cpolygon class=%22cls-1%22 points=%2256.25 0 18.75 0 0 32.48 18.75 64.95 56.25 64.95 75 32.48 56.25 0%22/%3E%3C/g%3E%3C/svg%3E'); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Ajusta el tamaño del SVG */
+    height: 80px;
+    z-index: -1; /* Para que quede detrás del texto */
+    opacity: 1;
+}  
+/* Definir la propiedad animable para los radios de los círculos */
+@property --circle1-radius {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 225px; /* 45% del tamaño inicial */
+}
+
+@property --circle2-radius {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 375px; /* 75% del tamaño inicial */
+}
+
+/* Estilos de la tarjeta */
+.card-modulo,
+.card-modulo .card-body .card-items {
+    height: 250px;
+    cursor: pointer;
+}
+
+.card-modulo .card-body, 
+.card-modulo .card-body .card-text {
+    height: 100%;
+}
+
+/* Alineación para que el h4 y p estén en líneas separadas */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alineación vertical en la parte superior */
+    padding: 20px; /* Ajustar espaciado si es necesario */
+    color: white;
+}
+
+.card-text h4, 
+.card-text p {
+    margin: 0; /* Eliminar márgenes para un espaciado uniforme */
+    line-height: 1.5; /* Ajustar la altura de línea si es necesario */
+    color: white;
+    transition: opacity 0.5s ease-in-out;
+}
+.neueThin {
+    font-family: 'NeueHaasDisplayXThin', sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+}
+.neueRoman {
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 100;
+}
+.neueMedium {
+    font-family: 'NeueHaasDisplayMediu', sans-serif;
+    /* font-weight: 100; */
+}
+.card-titles p {
+    margin-top: -15px; /* Añadir un pequeño margen superior para separar el título del párrafo */
+    font-size: 14px;
+}
+
+.card-titles {
+    margin-top: -20px; /* Asegurar que el div de títulos comience desde la parte superior */
+}
+
+
+.modulo-1-img {
+    background-image: url('../images/modulo-2.png');
+}
