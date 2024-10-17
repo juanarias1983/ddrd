@@ -35,7 +35,6 @@ circle {
 /* Propiedades iniciales de los círculos */
 .circle-1 {
     r: var(--circle1-radius);
-    fill: rgba(255, 85, 0, 0.3); /* Color principal */
     cx: 500; /* Mantiene el centro en la esquina superior derecha */
     cy: 0;
     transition: r 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Círculo 1: con rebote */
@@ -43,21 +42,103 @@ circle {
 
 .circle-2 {
     r: var(--circle2-radius);
-    fill: rgba(255, 85, 0, 0.3); /* Color ajustado más claro */
-    cx: 500; /* Mantiene el centro en la esquina superior derecha */
+    fill: rgba(255, 85, 0, 0.3);
+    cx: 500;
     cy: 0;
-    transition: r 0.8s cubic-bezier(0.42, 0, 0.58, 1); /* Círculo 2: velocidad rápida */
+    transition: r 0.8s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /* Hover para iniciar la animación de los círculos */
 .card-body:hover .circle-1 {
-    --circle1-radius: 600px; /* Círculo 1 cubrirá toda la imagen */
+    --circle1-radius: 600px;
 }
 
 .card-body:hover .circle-2 {
-    --circle2-radius: 600px; /* Círculo 2 también cubrirá toda la imagen */
-    fill-opacity: 1; /* El círculo 2 será completamente opaco */
+    --circle2-radius: 600px;
+    fill-opacity: 1; 
 }
+
+
+.card-modulo {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-blend-mode: multiply;
+}
+/* .card-modulo.modulo-1-img .card-body:hover {
+    background-color: rgba(255, 85, 0, 0.5);
+} */
+.card-modulo.modulo-1-img {
+    background: rgba(255, 85, 0, 0.5);
+}
+
+.card-modulo.modulo-1-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter:grayscale(100%);
+    z-index: -1;
+    background-image: url('../images/modulo-4.webp');
+}
+.card-modulo.modulo-1-img .circle-1,
+.card-modulo.modulo-1-img .circle-2{
+    fill: rgba(255, 85, 0, 0.3);
+}
+.card-modulo.modulo-2-img {
+    background-color: rgba(52, 184, 89, 0.5);
+    background-image: url('../images/modulo-2.png');
+}
+.card-modulo.modulo-2-img .circle-1,
+.card-modulo.modulo-2-img .circle-2{
+    fill: rgba(52, 184, 89, 0.3);
+}
+.card-modulo.modulo-3-img {
+    background-color: rgba(98, 79, 154, 0.5);
+    background-image: url('../images/modulo-3.png');
+}
+.card-modulo.modulo-3-img .circle-1,
+.card-modulo.modulo-3-img .circle-2{
+    fill: rgba(98, 79, 154, 0.3);
+}
+.card-modulo.modulo-4-img {
+    background-color: rgba(20, 105, 209, 0.5);
+    background-image: url('../images/modulo-4.png');
+}
+.card-modulo.modulo-4-img .circle-1,
+.card-modulo.modulo-4-img .circle-2{
+    fill: rgba(20, 105, 209, 0.3);
+}
+.card-modulo.modulo-5-img {
+    background-color: rgba(25, 167, 145, 0.5);
+    background-image: url('../images/modulo-5.png');
+}
+.card-modulo.modulo-5-img .circle-1,
+.card-modulo.modulo-5-img .circle-2{
+    fill: rgba(25, 167, 145, 0.3);
+}
+.card-modulo.modulo-6-img {
+    background-color: rgba(255, 126, 73, 0.5);
+    background-image: url('../images/modulo-6.png');
+}
+.card-modulo.modulo-6-img .circle-1,
+.card-modulo.modulo-6-img .circle-2{
+    fill: rgba(255, 126, 73, 0.3);
+}
+.card-modulo.modulo-7-img {
+    background-color: rgba(255, 85, 232, 0.5);
+    background-image: url('../images/modulo-7.png');
+}
+.card-modulo.modulo-7-img .circle-1,
+.card-modulo.modulo-7-img .circle-2{
+    fill: rgba(255, 85, 232, 0.3);
+}
+
 
 /* Estilos para el icono */
 .card-link {
@@ -90,7 +171,7 @@ circle {
         transform: scale(1.2);
     }
     100% {
-      transform: translate(50%, 35%) scale(1); 
+        transform: translate(50%, 35%) scale(1); 
     }
   }
   
@@ -168,8 +249,4 @@ circle {
     margin-top: -20px; /* Asegurar que el div de títulos comience desde la parte superior */
 }
 
-
-.modulo-1-img {
-    background-image: url('../images/modulo-2.png');
-}
 
