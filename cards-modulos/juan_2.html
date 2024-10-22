@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 - 2 Column Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="assets/style/juan_2_styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row gx-4"> <!-- Añadimos 'gx-4' para la separación entre columnas -->
+            <!-- Columna 1: col-8 -->
+            <div class="col-8">
+                <!-- Primer div que ocupa todo el ancho -->
+                <div class="div-col-1 mb-3 p-3 columna_1">
+                    <p>Div 1 - Columna 1</p>
+                </div>
+                <!-- Segundo div que ocupa todo el ancho -->
+                <div class="div-col-1 mb-3 p-3 columna_2">
+                    <p>Div 2 - Columna 1</p>
+                </div>
+            </div>
+
+            <!-- Columna 2: col-4 -->
+            <div class="col-4">
+                <div class="row g-2"> <!-- 'g-2' añade separación entre los divs internos -->
+                    <!-- Cada fila contiene dos divs -->
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_3">
+                            <p>Div 1 - Columna 2</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_4">
+                            <p>Div 2 - Columna 2</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_5">
+                            <p>Div 3 - Columna 2</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_6">
+                            <p>Div 4 - Columna 2</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_7">
+                            <p>Div 5 - Columna 2</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="div-col-2 p-2 columna_8">
+                            <p>Div 6 - Columna 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional, si necesitas funcionalidades interactivas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
