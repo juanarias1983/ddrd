@@ -1,11 +1,11 @@
 /* Colores de fondo */
 .div-col-1 {
-    background-color: #f0ad4e;
+    /* background-color: #f0ad4e; */
     opacity: 0;
 }
 
 .div-col-2 {
-    background-color: #5bc0de;
+    /* background-color: #5bc0de; */
     opacity: 0;
 }
 
@@ -25,33 +25,33 @@
 }
 
   .columna_1 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
   }
   .columna_2 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
     animation-delay: 0.01s;
   }
   .columna_3 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
     animation-delay: 0.01s;
   }
   .columna_4 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
-    animation-delay: 0.02s;
-  }
-  .columna_5 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
     animation-delay: 0.03s;
   }
-  .columna_6 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
-    animation-delay: 0.04s;
-  }
-  .columna_7 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
+  .columna_5 {
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
     animation-delay: 0.05s;
   }
+  .columna_6 {
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
+    animation-delay: 0.07s;
+  }
+  .columna_7 {
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
+    animation-delay: 0.09s;
+  }
   .columna_8 {
-    animation: expand 0.1s cubic-bezier(0,.81,.8,.78) forwards;
-    animation-delay: 0.06s;
+    animation: expand 0.5s cubic-bezier(0,.81,.8,.78) forwards;
+    animation-delay: 0.1s;
   }
