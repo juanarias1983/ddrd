@@ -10,10 +10,11 @@ $olive: #34610e;
 $oliveClear: #66963e;
 $cardHeight: 260px;
 $gap: 1.8rem;
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
 
 :root {
     --surface-color: #fff;
-    --curve: 40;
+    --curve: 24;
 }
 
 * {
@@ -41,7 +42,7 @@ body {
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: $shadow;
 
     &__icon {
         position: absolute;
@@ -128,7 +129,7 @@ body {
         font-size: 16px;
 
         &__legend {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             margin-right: 4px;
         }
@@ -351,27 +352,31 @@ body {
     color: #6A515E;
 
     font-weight: 800;
-    
+
     &--luz {
         background: -webkit-linear-gradient(#69330f, #69330f, #b4581b);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
+
     &--rgpd {
         background: -webkit-linear-gradient(#f2f2f2, #eee8ca, #e9cf40);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     &--gas {
         background: -webkit-linear-gradient(#102b49, #205083, #4278b1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     &--seguro {
         background: -webkit-linear-gradient(#193006, #34610e, #60b41b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     &--certificado {
         background: -webkit-linear-gradient(#69330f, #914615, #df6717);
         -webkit-text-fill-color: transparent;
@@ -593,13 +598,15 @@ body {
             border: 0.88px solid;
             width: max-content;
             display: none;
-            &--last{
+
+            &--last {
                 left: auto;
                 right: 0;
             }
         }
-        &:hover{
-            & .chart__item__hover{
+
+        &:hover {
+            & .chart__item__hover {
                 display: block;
             }
         }
@@ -613,28 +620,144 @@ body {
 }
 
 
-.board{
+.board {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
     padding: $gap;
-    &__left{
+
+    &__left {
         display: flex;
         flex-direction: column;
         gap: 32px;
 
         // Card de Admiminstración de fincas
-        &__administrator{
-            background-color: #92c3fc;
-            border-radius: 32px;
+        &__administrator {
+            background-color: #fff;
+            border-radius: calc(var(--curve) * 1px);
+            box-shadow: $shadow;
             width: 100%;
             height: $cardHeight;
-            text-align: center;
-            padding: 64px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            overflow: hidden;
+
+            &__col1 {
+                display: flex;
+                flex-direction: column;
+                background: url(../images/adm-hero.webp);
+                background-position: top;
+                background-size: contain;
+
+                &__head {
+                    height: 50%;
+                    position: relative;
+
+                    &__arc {
+                        width: 80px;
+                        height: 80px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        z-index: 1;
+                    }
+                }
+
+                &__main {
+                    height: 50%;
+                    background: #fff;
+                    border-radius: var(--curve) 0 0 0;
+                    padding: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &__title {
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin: 0;
+
+                        background: -webkit-linear-gradient(#102b49, #205083, #4278b1);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            &__col2 {
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                gap: 8px;
+                position: relative;
+                align-items: end;
+
+                &__text {
+                    height: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 8px;
+                    padding-right: 8px;
+                    max-width: 192px;
+                    padding-top: 16px;
+
+                    &__icon{
+                        position: absolute;
+                        top: 24px;
+                        left: 24px;
+                        width: 28px;
+                    }
+
+                    &__legend {
+                        margin: 0;
+                        color: #6A515E;
+                        font-weight: 800;
+                        font-size: 16px;
+                        line-height: 120%;
+                    }
+
+                    &__result {
+                        text-align: end;
+                        
+                        &__number {
+                            font-size: 30px;
+                            font-weight: 800;
+                            line-height: 100%;
+                            background: -webkit-linear-gradient(#102b49, #205083, #4278b1);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                        &__legend{
+                            font-size: 11px;
+                            font-weight: 800;
+                            line-height: 100%;
+                            background: -webkit-linear-gradient(#102b4b, #205083, #4278b1);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+
+                &__graph{
+                    &__legend{
+                        position: relative;
+                        bottom: -8px;
+                        font-size: 11px;
+                        font-weight: 800;
+                        color: #c1a8b5;
+                    }
+                }
+
+            }
+
         }
-        &__graph{
+
+
+        &__graph {
             background-color: #e77021;
-            border-radius: 32px;
+            border-radius: calc(var(--curve) * 1px);
             width: 100%;
             height: calc(2*$cardHeight + $gap);
             text-align: center;
